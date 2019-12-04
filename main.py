@@ -5,9 +5,6 @@ from Utils import utils
 
 if __name__ == "__main__":
     db = DBHelper()
-    db.cursor.execute("delete from users")
-    db.cursor.execute("delete from solved_problems")
-    db = DBHelper()
     dc = DataCenter(db)
     last_day = ""
     while True:
@@ -18,7 +15,6 @@ if __name__ == "__main__":
         if day != last_day:
             dc.record(day)
             last_day = day
-        break
 
         time.sleep(60)
 
