@@ -16,7 +16,6 @@ if __name__ == "__main__":
             dc.record(day)
             last_day = day
 
-        break
         time.sleep(60)
 
 
